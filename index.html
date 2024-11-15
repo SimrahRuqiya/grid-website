@@ -42,7 +42,7 @@
     height:100vh;
   }
 
-  a {
+  aside a {
     line-height: 50px;
     text-decoration: none;
     color: white;
@@ -53,6 +53,11 @@
   middle {
     grid-area: m;
     height: 200px;
+    display: grid;
+  }
+
+  middle img {
+    display: none;
   }
 
   content-1 {
@@ -80,11 +85,27 @@
   }
 
   button {
+    margin-left: 700px;
     grid-area: b;
     background-color: #EAEBED;
     padding: 1em;
     color: black;
-    
+  }
+
+  #default {
+    display: block;
+  }
+
+  #button1:target {
+    display: block;
+  }
+
+  #button2:target {
+    display: block;
+  }
+
+  #default:target {
+    display: none;
   }
 
   footer {
@@ -101,28 +122,32 @@
 
     <main>
         <header>Art in Games</header>
-        <image><img ></image>
+        <image><img src="header.jpg" height="50px"></image>
         <aside>
-            <a href="">Home</a> <br>
+            <a href="index.html">Home</a> <br>
             <a href="">Page 2</a> <br>
             <a href="">Page 3</a> <br>
             <a href="">Contact</a>
         </aside>
         <middle>
-            <center><img src="default.jpg" height="220px"></center>
+            <div>
+                <center><img id="button1" src="pic1.jpg" height="220px" style="display: none;"></center>
+                <center><img id="button2" src="pic2.jpg" height="220px" style="display: none;"></center>
+                <center><img id="default" src="default.jpg" height="220px" style="display: block;"></center>
+            </div>
         </middle>
         <content-1>A website that displays some beautiful visuals of some beautiful games. Click on the buttons to view them! </content-1>
         <content-2>
-            Life is Strange <br>
-            Developer: Don't Nod
-            <button>Click to view</button>
+            Life is Strange 
+            The plot focuses on Max Caulfield, an 18-year-old photography student who discovers that she has the ability to rewind time at any moment.
+            <a href="#button1"><button>Click to view</button></a>
         </content-2>
         <content-3>
-            Detroit: Become Human <br>
-            Developer: Quantic Dream
-            <button>Click to view</button>
+            Detroit: Become Human 
+            The plot follows three androids: Kara, who escapes her owner to explore her newfound sentience and protect a young girl; Connor, whose job is to hunt down sentient androids; Markus, who devotes himself to releasing other androids from servitude. 
+            <a href="#button2"><button>Click to view</button></a>
         </content-3>
-        <footer>Footer</footer>
+        <footer>Simrah Shabandri &copy; HW 3</footer>
     </main>
 
 </body>
