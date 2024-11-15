@@ -52,8 +52,9 @@
 
   middle {
     grid-area: m;
-    height: 200px;
+    height:fit-content;
     display: grid;
+    border: #594157 solid 2px;
   }
 
   middle img {
@@ -92,20 +93,14 @@
     color: black;
   }
 
-  #default {
-    display: block;
+  #button1,
+  #button2 {
+    display: none;
   }
 
-  #button1:target {
-    display: block;
-  }
-
+  #button1:target,
   #button2:target {
     display: block;
-  }
-
-  #default:target {
-    display: none;
   }
 
   footer {
@@ -130,11 +125,10 @@
             <a href="">Contact</a>
         </aside>
         <middle>
-            <div>
-                <center><img id="button1" src="pic1.jpg" height="220px" style="display: none;"></center>
-                <center><img id="button2" src="pic2.jpg" height="220px" style="display: none;"></center>
-                <center><img id="default" src="default.jpg" height="220px" style="display: block;"></center>
-            </div>
+            <center>
+                <img id="button1" src="pic1.jpg" height="220px">
+                <img id="button2" src="pic2.jpg" height="220px">
+            </center>
         </middle>
         <content-1>A website that displays some beautiful visuals of some beautiful games. Click on the buttons to view them! </content-1>
         <content-2>
