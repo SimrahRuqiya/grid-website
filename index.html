@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas: 
+      "h h h i i"
+      "a m m m m"
+      "a c c c c"
+      "a d d b b"
+      "a e e b b"
+      "a f f f f";
+    grid-template-columns: auto 1fr 20%;
+    gap: 10px;
+  }
+
+  header {
+    grid-area: h;
+    background-color: #0010f457;
+    padding: 1em;
+    text-align: center;
+  }
+
+  image {
+    grid-area: i;
+  }
+
+  aside {
+    grid-area: a;
+    background-color: #ea4335;
+    padding: 1em;
+    color: white;
+    min-width: 12em;
+  }
+
+  middle {
+    grid-area: m;
+  }
+
+  content-1 {
+    grid-area: c;
+    background-color: #4285f4;
+    padding: 1em;
+    color: white;
+  }
+
+  content-2 {
+    grid-area: d;
+    background-color: #4285f4;
+    padding: 1em;
+    color: white;
+  }
+
+  content-3 {
+    grid-area: e;
+    background-color: #4285f4;
+    padding: 1em;
+    color: white;
+  }
+
+  button {
+    grid-area: b;
+    background-color: #34a853;
+    padding: 1em;
+    color: white;
+    min-width: 12em;
+  }
+
+  footer {
+    grid-area: f;
+    background-color: #888888;
+    padding: 1em;
+    text-align: center;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+    <main>
+        <header>Header</header>
+        <image>Logo</image>
+        <aside>
+            <a>Home</a>
+            <a>Page 2</a>
+            <a>Page 3</a>
+            <a>Contact</a>
+        </aside>
+        <middle>Here there is an image that changes based on the selected button, Button1 or Button2</middle>
+        <content-1>Content#1</content-1>
+        <content-2>
+            Content#2
+            <button>Button1</button>
+        </content-2>
+        <content-3>
+            Content#3
+            <button>Button2</button>
+        </content-3>
+        <footer>Footer</footer>
+    </main>
+
+</body>
+</html>
